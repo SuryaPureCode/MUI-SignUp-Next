@@ -51,14 +51,14 @@ const SignupForm = () => {
   };
   
   return (
-    <Box sx={{display:'flex', flexDirection:{xs:'column',sm:"column",md:'row',lg:'row',xl:'row'},alignItems:'center',justifyContent:'center',width:'100%'}}>
-   <Box sx={{height:{xs:'450px',sm:'450px',md:'800px',lg:'800px',xl:'800px'},maxWidth:'500px',width:'100%'}}>
+    <Box sx={{display:'flex', flexDirection:{xs:'column',sm:"column",md:'row',lg:'row',xl:'row'},alignItems:'center',justifyContent:'center',width:'100%' ,height:'100vh'}}>
+   <Box sx={{height:{xs:'auto',sm:'auto',md:'100%',lg:'100%',xl:'100%'} ,width:{xs:'100%',sm:'100%',md:'50%',lg:'50%',xl:'50%'}}}>
       <img
-        style={{ width: '100%',height:'100%' }}
+        style={{ width: '100%',height:'100%', objectFit:'cover' }}
         alt="Descriptive"
         src="https://img.freepik.com/free-photo/sign-up-form-button-graphic-concept_53876-101286.jpg?t=st=1722021464~exp=1722025064~hmac=30093e2380d73d78f3e9df142cc4a16024b7a5f156d03c2a7664d3b59242aef2&w=740"/>
  </Box>
-    <Box sx={{ display: 'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center', fontFamily: 'sans serif', gap:'40px',padding:'10px',maxWidth:'500px',width:'100%' }}>
+    <Box sx={{ display: 'flex', flexDirection:'column', alignItems: 'center', fontFamily: 'sans serif', gap:'12%',padding:'10px',width:{xs:'100%',sm:'100%',md:'50%',lg:'50%',xl:'50%'},height:{xs:'50%',sm:'50%',md:'100%',lg:'100%',xl:'100%'} }}>
       <Box sx={{display:'flex',justifyContent:'space-between',width:'100%'}}>
         <Typography sx={{fontSize:'16px',fontWeight:'bold',color:'green'}}>Quality Health</Typography>
         <Button sx={{padding:'3px 5px',fontSize:'12px',color:'green',borderColor:"green"}} variant="outlined">How it Works</Button>
@@ -272,7 +272,6 @@ const SignupForm = () => {
             border:'none',
           },
           color:'green',
-          padding:'3px'
         }}
         onChange={handleChange2}
       >
